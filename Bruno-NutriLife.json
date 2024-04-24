@@ -1,0 +1,643 @@
+{
+  "name": "NutriLife",
+  "version": "1",
+  "items": [
+    {
+      "type": "json",
+      "name": "bruno",
+      "seq": 1
+    },
+    {
+      "type": "folder",
+      "name": "Profiles",
+      "items": [
+        {
+          "type": "http",
+          "name": "Create Profile by User ID",
+          "seq": 4,
+          "request": {
+            "url": "http://localhost:3000/profile/",
+            "method": "POST",
+            "headers": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"bio\": \"Bio teste\",\n  \"userId\": \"9ccbd6b2-8674-4e46-a2d9-0a118646458d\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "Delete Profile by User ID",
+          "seq": 3,
+          "request": {
+            "url": "http://localhost:3000/profile/9ccbd6b2-8674-4e46-a2d9-0a118646458d",
+            "method": "DELETE",
+            "headers": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"bio\": \"Bio 2\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "Profile by User ID",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:3000/profile/9ccbd6b2-8674-4e46-a2d9-0a118646458d",
+            "method": "GET",
+            "headers": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "Update Profile by User ID",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:3000/profile/9ccbd6b2-8674-4e46-a2d9-0a118646458d",
+            "method": "PUT",
+            "headers": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"bio\": \"Bio teste\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "User",
+      "items": [
+        {
+          "type": "http",
+          "name": "Create User",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:3000/users/",
+            "method": "POST",
+            "headers": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"name\": \"Adriel\",\n  \"email\": \"adriel@mail.com\",\n  \"bio\": \"Bio aqui\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "All Users",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:3000/users/",
+            "method": "GET",
+            "headers": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "Delete User",
+          "seq": 4,
+          "request": {
+            "url": "http://localhost:3000/users/a8b20e7a-1eb1-45b2-83b2-d10b4f3ef83b",
+            "method": "DELETE",
+            "headers": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "User by ID",
+          "seq": 3,
+          "request": {
+            "url": "http://localhost:3000/users/1985c4d3-e116-460d-864d-5b9d909e6b21",
+            "method": "GET",
+            "headers": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Preferences",
+      "items": [
+        {
+          "type": "http",
+          "name": "Create Preferences",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:3000/preferences/",
+            "method": "POST",
+            "headers": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n    \"userId\": \"9ccbd6b2-8674-4e46-a2d9-0a118646458d\",\n    \"type\": \"intolerance\",\n    \"value\": \"Lactose\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "Preferences By User ID",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:3000/preferences/9ccbd6b2-8674-4e46-a2d9-0a118646458d",
+            "method": "GET",
+            "headers": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n    \"userId\": \"9ccbd6b2-8674-4e46-a2d9-0a118646458d\",\n    \"type\": \"intolerance\",\n    \"value\": \"Lactose\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "All Preferences",
+          "seq": 3,
+          "request": {
+            "url": "http://localhost:3000/preferences",
+            "method": "GET",
+            "headers": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n    \"userId\": \"9ccbd6b2-8674-4e46-a2d9-0a118646458d\",\n    \"type\": \"intolerance\",\n    \"value\": \"Lactose\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "Update Preference By ID",
+          "seq": 4,
+          "request": {
+            "url": "http://localhost:3000/preferences/1",
+            "method": "PUT",
+            "headers": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n    \"userId\": \"9ccbd6b2-8674-4e46-a2d9-0a118646458d\",\n    \"type\": \"allergy\",\n    \"value\": \"Glúten\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "Delete Preference By ID",
+          "seq": 5,
+          "request": {
+            "url": "http://localhost:3000/preferences/1",
+            "method": "DELETE",
+            "headers": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n    \"userId\": \"9ccbd6b2-8674-4e46-a2d9-0a118646458d\",\n    \"type\": \"allergy\",\n    \"value\": \"Glúten\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Meals",
+      "items": [
+        {
+          "type": "http",
+          "name": "All Meals",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:3000/meals/",
+            "method": "GET",
+            "headers": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "Create Meal",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:3000/meals/",
+            "method": "POST",
+            "headers": [],
+            "body": {
+              "mode": "multipartForm",
+              "formUrlEncoded": [],
+              "multipartForm": [
+                {
+                  "type": "text",
+                  "name": "userId",
+                  "value": "9ccbd6b2-8674-4e46-a2d9-0a118646458d",
+                  "enabled": true
+                },
+                {
+                  "type": "text",
+                  "name": "title",
+                  "value": "Almoço saudável",
+                  "enabled": true
+                },
+                {
+                  "type": "text",
+                  "name": "description",
+                  "value": "ebaa",
+                  "enabled": true
+                },
+                {
+                  "type": "text",
+                  "name": "calories",
+                  "value": "600",
+                  "enabled": true
+                },
+                {
+                  "type": "file",
+                  "name": "image",
+                  "value": [
+                    "C:\\Users\\Adriel\\OneDrive\\Imagens\\almoco-saudavel.jpg"
+                  ],
+                  "enabled": true
+                }
+              ]
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "Update Meal",
+          "seq": 3,
+          "request": {
+            "url": "http://localhost:3000/meals/4",
+            "method": "PUT",
+            "headers": [],
+            "body": {
+              "mode": "multipartForm",
+              "formUrlEncoded": [],
+              "multipartForm": [
+                {
+                  "type": "text",
+                  "name": "userId",
+                  "value": "9ccbd6b2-8674-4e46-a2d9-0a118646458d",
+                  "enabled": true
+                },
+                {
+                  "type": "text",
+                  "name": "title",
+                  "value": "Almoço legal",
+                  "enabled": true
+                },
+                {
+                  "type": "text",
+                  "name": "description",
+                  "value": "esse almoço é saudável 2222222",
+                  "enabled": true
+                },
+                {
+                  "type": "text",
+                  "name": "calories",
+                  "value": "600",
+                  "enabled": true
+                }
+              ]
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "Meal by ID",
+          "seq": 4,
+          "request": {
+            "url": "http://localhost:3000/meals/4",
+            "method": "GET",
+            "headers": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        },
+        {
+          "type": "http",
+          "name": "Delete Meal by ID",
+          "seq": 5,
+          "request": {
+            "url": "http://localhost:3000/meals/4",
+            "method": "DELETE",
+            "headers": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "auth": {
+              "mode": "none",
+              "basic": {
+                "username": "",
+                "password": ""
+              },
+              "bearer": {
+                "token": ""
+              }
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "query": []
+          }
+        }
+      ]
+    }
+  ],
+  "environments": []
+}
