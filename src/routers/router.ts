@@ -2,7 +2,7 @@ import express from "express";
 import UserController from "../controllers/user.controller";
 import ProfileController from "../controllers/profile.controller";
 import PreferenceController from "../controllers/preferences.controller";
-// import MealController from './controllers/meal.controller';
+import MealController from "../controllers/meal.controller";
 
 const router = express.Router();
 
@@ -25,6 +25,8 @@ router.delete(
     PreferenceController.deletePreference
 );
 
-// router.post('/meals', MealController.createMeal);
+router.get("/meals", MealController.getAllMeals);
+router.get("/meals/:mealId", MealController.getMealById);
+router.delete("/meals/:mealId", MealController.deleteMeal);
 
 export default router;
