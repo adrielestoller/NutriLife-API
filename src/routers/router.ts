@@ -1,6 +1,6 @@
 import express from "express";
 import UserController from "../controllers/user.controller";
-// import ProfileController from './controllers/profile.controller';
+import ProfileController from "../controllers/profile.controller";
 // import PreferenceController from './controllers/preference.controller';
 // import MealController from './controllers/meal.controller';
 
@@ -11,7 +11,10 @@ router.get("/users", UserController.getAllUsers);
 router.get("/users/:userId", UserController.getUserById);
 router.delete("/users/:userId", UserController.deleteUserById);
 
-// router.post('/profiles', ProfileController.createProfile);
+router.post("/profile/:userId", ProfileController.createProfile);
+router.get("/profile/:userId", ProfileController.getProfileByUserId);
+router.put("/profile/:userId", ProfileController.updateProfile);
+router.delete("/profile/:userId", ProfileController.deleteProfile);
 
 // router.post('/preferences', PreferenceController.createPreference);
 
