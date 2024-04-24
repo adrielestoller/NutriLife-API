@@ -1,7 +1,7 @@
 import express from "express";
 import UserController from "../controllers/user.controller";
 import ProfileController from "../controllers/profile.controller";
-// import PreferenceController from './controllers/preference.controller';
+import PreferenceController from "../controllers/preferences.controller";
 // import MealController from './controllers/meal.controller';
 
 const router = express.Router();
@@ -16,7 +16,14 @@ router.get("/profile/:userId", ProfileController.getProfileByUserId);
 router.put("/profile/:userId", ProfileController.updateProfile);
 router.delete("/profile/:userId", ProfileController.deleteProfile);
 
-// router.post('/preferences', PreferenceController.createPreference);
+router.post("/preferences", PreferenceController.createPreference);
+router.get("/preferences", PreferenceController.getAllPreferences);
+router.get("/preferences/:userId", PreferenceController.getPreferencesByUserId);
+router.put("/preferences/:preferenceId", PreferenceController.updatePreference);
+router.delete(
+    "/preferences/:preferenceId",
+    PreferenceController.deletePreference
+);
 
 // router.post('/meals', MealController.createMeal);
 
