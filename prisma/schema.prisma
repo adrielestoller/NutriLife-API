@@ -51,21 +51,23 @@ model Category {
 }
 
 model Preference {
-  id     Int    @id @default(autoincrement())
-  user   User   @relation(fields: [userId], references: [id])
+  id     Int     @id @default(autoincrement())
+  user   User    @relation(fields: [userId], references: [id])
   userId String
-  type String?
-  value String?
+  type   String?
+  value  String?
   // + campos para as preferências alimentares
 }
 
 model Meal {
   id          Int      @id @default(autoincrement())
   user        User     @relation(fields: [userId], references: [id])
+  title       String?
   userId      String
-  datetime    DateTime
+  datetime    DateTime @default(now())
   description String?
   calories    Int?
+  image       String?
   // + campos para as refeições realizadas
 }
 
